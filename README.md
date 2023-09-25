@@ -1,208 +1,50 @@
-In this project, let's build **Nxt Trendz** app with authentication by applying the concepts we have learned till now.
+# Mobile Number Verification Application
 
-### Refer to the image below:
+## Overview
 
-<br/>
-<div style="text-align: center;">
-    <img src="https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-authorisation-output-v2.gif" alt="nxt trendz authentication desktop output" style="max-width:90%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
-</div>
-<br/>
+This is a simple Mobile Number Verification application built using React.js. It allows users to enter their mobile numbers, send OTPs, and verify them. The application consists of two screens: Mobile Number Screen and OTP Verification Screen. 
 
-### Design Files
+The primary goal of this project was to demonstrate a basic flow of mobile number verification using React.js. Please note that this is a simplified example and doesn't include actual API calls for OTP generation and verification. Additionally, it lacks extensive styling and validation.
 
-<details>
-<summary>Click to view</summary>
+## Screenshots
 
-- [Extra Small (Size < 576px), Small (Size >= 576px), and Medium (Size >= 768px) - Login, Login Error, Home](https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-authentication-sm-outputs.png)
-- [Extra Small (Size < 576px), Small (Size >= 576px), and Medium (Size >= 768px) - Products, Cart](https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-authentication-sm-products-cart-outputs.png)
-- [Large (Size >= 992px) and Extra Large (Size >= 1200px) - Login](https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-authentication-lg-login-output.png)
-- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Home](https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-authentication-lg-home-output.png)
-- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Products](https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-authorisation-lg-products-output.png)
-- [Medium (Size >= 768px), Large (Size >= 992px) and Extra Large (Size >= 1200px) - Cart](https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-authorisation-lg-cart-output.png)
+![Mobile Number Screen](screenshots/mobile-number-screen.png)
 
-</details>
+![OTP Verification Screen](screenshots/otp-verification-screen.png)
 
-### Set Up Instructions
+## Features
 
-<details>
-<summary>Click to view</summary>
+- Users can enter their mobile numbers and send OTPs.
+- OTPs can be verified on the OTP Verification Screen.
+- Simple notification system to display OTP and verification messages.
+- Basic input validation for mobile numbers and OTPs.
 
-- Download dependencies by running `npm install`
-- Start up the app using `npm start`
-</details>
+## Installation
 
-### Completion Instructions
+1. Clone the repository to your local machine.
 
-<details>
-<summary>Functionality to be added</summary>
-<br/>
+```bash
+git clone https://github.com/your-username/mobile-number-verification-app.git
 
-The app must have the following functionalities
+cd mobile-number-verification-app
 
-- When an unauthenticated user tries to access the Home Route, Products Route or Cart Route, then the page should be redirected to the Login Route
-- When an authenticated user tries to access the Home Route, Products Route or Cart Route, then the page should be navigated to the respective route
-- When an authenticated user tries to access the Login Route, then the page should be redirected to the Home Route
-- When the Logout button is clicked, then the page should be navigated to the Login Route
 
-</details>
+The application will be accessible at http://localhost:3000 in your web browser.
 
-<details>
+Usage
+Enter a valid 10-digit mobile number on the Mobile Number Screen.
+Click on the "Send OTP" button to simulate OTP generation.
+Enter the OTP on the OTP Verification Screen.
+Click on the "Verify OTP" button to simulate OTP verification.
+You will see a success or failure message in response.
 
-<summary>API Requests & Responses</summary>
-<br/>
 
-**loginApiUrl**
+Known Issues
+This is a simplified example and does not include actual API calls for OTP generation and verification.
+The styling is basic and may not match the design specifications provided in the sample.
+Input validation is minimal and does not cover all possible scenarios.
+The application does not handle wrong numbers or OTPs not received on the phone.
 
-#### API: `https://apis.ccbp.in/login`
 
-#### Method: `POST`
-
-#### Description:
-
-Returns a response based on the credentials provided
-
-#### Sample Success Response
-
-```json
-{
-  "jwt_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJhaHVsIiwicm9sZSI6IlBSSU1FX1VTRVIiLCJpYXQiOjE2MTk2Mjg2MTN9.nZDlFsnSWArLKKeF0QbmdVfLgzUbx1BGJsqa2kc_21Y"
-}
-```
-
-#### Sample Failure Response
-
-```json
-{
-  "status_code": 404,
-  "error_msg": "Username is not found"
-}
-```
-
-</details>
-
-<details>
-<summary>Components Structure</summary>
-
-<br/>
-<div style="text-align: center;">
-    <img src="https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-authentication-login-home-component-structure-breakdown.png" alt="nxt trendz authentication login and home component structure breakdown" style="max-width:100%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
-</div>
-<br/>
-<div style="text-align: center;">
-    <img src="https://assets.ccbp.in/frontend/content/react-js/nxt-trendz-authentication-products-cart-component-structure-breakdown.png" alt="nxt trendz authentication products and cart component structure breakdown" style="max-width:100%;box-shadow:0 2.8px 2.2px rgba(0, 0, 0, 0.12)">
-</div>
-<br/>
-</details>
-
-<details>
-<summary>Implementation Files</summary>
-<br/>
-
-Use these files to complete the implementation:
-
-- `src/App.js`
-- `src/components/LoginForm/index.js`
-- `src/components/Header/index.js`
-- `src/components/Header/index.css`
-- `src/components/Products/index.js`
-- `src/components/Products/index.css`
-- `src/components/Cart/index.js`
-- `src/components/Cart/index.css`
-</details>
-
-### Quick Tips
-
-<details>
-<summary>Click to view</summary>
-<br>
-
-- You can use the `box-shadow` CSS property to apply the box-shadow effect to containers
-
-  ```
-    box-shadow: 0px 4px 16px 0px #bfbfbf;
-  ```
-
-  <br/>
-   <img src="https://assets.ccbp.in/frontend/content/react-js/box-shadow-img.png" alt="box shadow" style="width:200px" />
-
-- You can use the `cursor` CSS property to specify the mouse cursor to be displayed when pointing over an element
-
-  ```
-    cursor: pointer;
-  ```
-
-  <br/>
-   <img src="https://assets.ccbp.in/frontend/content/react-js/cursor-pointer-img.png" alt="cursor pointer" style="width:100px" />
-
-- You can use the below `outline` CSS property for buttons and input elements to remove the highlighting when the elements are clicked
-
-  ```
-    outline: none;
-  ```
-
-</details>
-
-### Important Note
-
-<details>
-<summary>Click to view</summary>
-
-<br/>
-
-**The following instructions are required for the tests to pass**
-
-- `Home` route should consist of `/` in the URL path
-- `Login` route should consist of `/login` in the URL path
-- `Products` route should consist of `/products` in the URL path
-- `Cart` route should consist of `/cart` in the URL path
-- No need to use the `BrowserRouter` in `App.js` as we have already included in `index.js`
-- User credentials
-
-  ```text
-   username: rahul
-   password: rahul@2021
-  ```
-
-</details>
-
-### Resources
-
-<details>
-<summary>Image URLs</summary>
-
-- [https://assets.ccbp.in/frontend/react-js/nxt-trendz-products-img.png](https://assets.ccbp.in/frontend/react-js/nxt-trendz-products-img.png) alt should be **products**
-- [https://assets.ccbp.in/frontend/react-js/nxt-trendz-cart-img.png](https://assets.ccbp.in/frontend/react-js/nxt-trendz-cart-img.png) alt should be **cart**
-
-</details>
-
-<details>
-<summary>Colors</summary>
-
-<br/>
-
-<div style="background-color: #1e293b; width: 150px; padding: 10px; color: white">Hex: #1e293b</div>
-<div style="background-color: #ffffff; width: 150px; padding: 10px; color: black">Hex: #ffffff</div>
-<div style="background-color: #475569; width: 150px; padding: 10px; color: white">Hex: #475569</div>
-<div style="background-color: #e6f6ff; width: 150px; padding: 10px; color: black">Hex: #e6f6ff</div>
-<div style="background-color: #d7dfe9; width: 150px; padding: 10px; color: black">Hex: #d7dfe9</div>
-<div style="background-color: #e2e8f0; width: 150px; padding: 10px; color: black">Hex: #e2e8f0</div>
-<div style="background-color: #64748b; width: 150px; padding: 10px; color: black">Hex: #64748b</div>
-<div style="background-color: #0b69ff; width: 150px; padding: 10px; color: white">Hex: #0b69ff</div>
-<div style="background-color: #ff0b37; width: 150px; padding: 10px; color: white">Hex: #ff0b37</div>
-<div style="background-color: #0967d2; width: 150px; padding: 10px; color: white">Hex: #0967d2</div>
-
-</details>
-
-<details>
-<summary>Font-families</summary>
-
-- Roboto
-
-</details>
-
-> ### _Things to Keep in Mind_
->
-> - All components you implement should go in the `src/components` directory.
-> - Don't change the component folder names as those are the files being imported into the tests.
-> - **Do not remove the pre-filled code**
-> - Want to quickly review some of the concepts you’ve been learning? Take a look at the Cheat Sheets.
+Contributing
+Contributions are welcome! If you'd like to improve this application or fix issues, please feel free to fork the repository and submit a pull request
