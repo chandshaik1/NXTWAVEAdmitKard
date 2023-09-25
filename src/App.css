@@ -1,0 +1,33 @@
+.App {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+div {
+  margin-bottom: 10px;
+}
+
+.notification {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+button {
+  background-color: orange; /* Set the background color to orange */
+  color: white; /* Set the text color to white */
+  border: none;
+  border-radius: 50px; /* Use border-radius to create an oval shape */
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: darkorange; /* Change the background color on hover */
+}
